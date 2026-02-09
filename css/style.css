@@ -13,6 +13,10 @@
 
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 /* cuerpo del html*/
@@ -21,11 +25,20 @@ body{
     font-size: 16px;
 }
 
-/*titulo css */
-.titulo{
-    text-align: center;
+h1{
     font-size: 3.8rem;
 }
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
 /* titulo span*/
 .titulo span{
     font-size: 2rem;
@@ -37,9 +50,25 @@ body{
     margin: 0 auto;
 }
 
-/*clase navegador*/
-.nav-bg{
+.boton{
     background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    
+}
+@media (min-width: 768px){
+/*clase navegador*/
+    .nav-bg{
+        background-color: var(--secundario);
+    }
 }
 
 /*clase del navegador principal*/
@@ -76,3 +105,34 @@ body{
     color: var(--oscuro);
 }
 
+/* Css para la imagen del index, con ID */
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.contenido-hero{
+    position: absolute;
+    background-color:rgba(0,0,0,.7); /** Anterior **/
+    background-color: rgba(0 0 0 / 70% );
+    width: 100%;
+    height: 100%;
+
+    /** Alinear horizontal y verticalmente **/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2, .contenido-hero p {
+
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
